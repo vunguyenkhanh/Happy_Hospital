@@ -561,7 +561,7 @@ export class MainScene extends Scene {
       .setInteractive()
     instruction.on('pointerup', () => {
       window.open(
-        'https://github.com/phamtuanhien/Project20211_HappyHospital#readme'
+        'https://github.com/vunguyenkhanh/Happy_Hospital#readme'
       )
     })
   }
