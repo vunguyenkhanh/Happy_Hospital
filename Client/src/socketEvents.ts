@@ -26,7 +26,7 @@ import { io } from 'socket.io-client'
 import { Agv } from './classes/agv'
 import { AutoAgv } from './classes/AutoAgv'
 
-const serverUrl = 'http://localhost:3009'
+const serverUrl = 'https://happy-hospital-server.herokuapp.com' // Nếu chạy ở local thì thay bằng: http://localhost:5000
 export const socket = io(serverUrl)
 export const localSocketId = socket.id
 

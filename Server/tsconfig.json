@@ -13,7 +13,7 @@
       "baseUrl": ".",
       "outDir": "out",
     },
-    // "include": ["./index.d.ts", "**/*.ts"],
+    "include": ["src/**/*.ts"],
     "exclude": ["node_modules", "./dist/", "./out/**/*"]
   }
   

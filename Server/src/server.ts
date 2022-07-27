@@ -15,11 +15,11 @@ const io = require('socket.io')(server, {
     origin: '*',
   },
 })
-server.listen(3009)
+server.listen(process.env.PORT || 5000)
 
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: '*',
     methods: ['GET', 'POST'],
   })
 )
@@ -49,7 +49,10 @@ io.on('connection', (socket: Socket) => {
       doorPos: Position[]
       pathPos: Position[]
     }) => {
-      console.log('-----------------------------------------------------\nNew client connected!, with id: ', socket.id)
+      console.log(
+        '-----------------------------------------------------\nNew client connected!, with id: ',
+        socket.id
+      )
       players[socket.id] = new Player(groundPos, doorPos, pathPos)
     }
   )
